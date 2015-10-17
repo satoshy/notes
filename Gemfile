@@ -17,15 +17,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'devise'
-gem 'devise-bootstrap-views'
 gem 'cancancan'
 gem 'rolify'
 
+gem 'simple_form'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 group :development, :test do
   gem 'web-console', '~> 2.0'
