@@ -1,12 +1,14 @@
-<p>
-  <strong>Title:</strong>
-  <%= @note.title %>
-</p>
+<div id="show">
+  <p>
+    <strong>Title:</strong>
+    <%= @note.title %>
+  </p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @note.body %>
-</p>
+  <p>
+    <strong>Body:</strong>
+    <%= @note.body %>
+  </p>
 
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>
+  <%= link_to 'Edit', edit_note_path(@note) %> |
+  <%= link_to 'Back', notes_path %>
+</div>

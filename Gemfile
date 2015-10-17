@@ -17,13 +17,18 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'devise'
-gem 'cancancan'
+gem 'cancancan', '~> 1.10'
 gem 'rolify'
 
 gem 'simple_form'
+gem 'will_paginate', '~> 3.0.6'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
+gem 'carrierwave'
+gem "jquery-fileupload-rails"
+
+gem "figaro"
+
+gem "rails_best_practices"
 
 group :development, :test do
   gem 'web-console', '~> 2.0'
