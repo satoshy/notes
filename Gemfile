@@ -22,12 +22,12 @@ gem 'rolify'
 
 gem 'simple_form'
 gem 'will_paginate', '~> 3.0.6'
-
 gem 'carrierwave'
+gem 'mini_magick'
 gem "jquery-fileupload-rails"
+gem 'ckeditor', github: 'galetahub/ckeditor'
 
 gem "figaro"
-
 gem "rails_best_practices"
 
 group :development, :test do

@@ -15,9 +15,10 @@
       <% @notes.each do |note| %>
         <tr>
           <td><%= note.title %></td>
-          <td><%= note.body %></td>
+          <td><%= sanitize(note.body[0,70]) %></td>
           <td><%= link_to 'Show', note, class: "btn btn-success"%></td>
-          <td><%= link_to 'Edit', edit_note_path(note), class: "btn btn-primary" %></td>
+          <td><%= link_to 'Edit', edit_note_path(note), class: "btn btn-primary", 
+                                          data: { 'no-turbolink'=>true} %></td>
           <td><%= link_to 'Destroy', note, method: :delete, class: "btn btn-danger" %></td>
         </tr>
       <% end %>
@@ -26,5 +27,5 @@
 
   <br>
 
-  <%= link_to 'New Note', new_note_path %>
+  <%= link_to 'New Note', new_note_path, data: { 'no-turbolink'=>true} %>
 </div>
