@@ -11,14 +11,14 @@
                                 end_year: Date.today.year - 10,
                                 order: [:year, :month, :day] %>
       <%= f.input :phone %>
-      <%= f.input :username, required: true %>
+      <%= f.input :username, label: 'Login', required: true %>
       <%= f.input :email, required: true %>
       <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
       <%= f.input :password_confirmation, required: true %>
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
+      <%= f.button :submit, "Sign up", class: "btn btn-success" %>
     </div>
   <% end %>
 

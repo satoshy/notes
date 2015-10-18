@@ -1,11 +1,9 @@
 <div id="show">
-  <p>
-    <strong>Title:</strong>
+  <h2>
     <%= @note.title %>
-  </p>
+  </h2>
 
   <p>
-    <strong>Body:</strong>
     <%= sanitize(@note.body) %>
   </p>
 

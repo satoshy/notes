@@ -26,6 +26,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem "jquery-fileupload-rails"
 gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'non-stupid-digest-assets'
 
 gem "figaro"
 gem "rails_best_practices"
