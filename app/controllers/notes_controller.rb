@@ -4,7 +4,7 @@ class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
 
   def index
-    @notes = Note.all
+    @notes = Note.order("created_at DESC").where(user_id: current_user.id)
   end
 
   def show
@@ -18,7 +18,7 @@ class NotesController < ApplicationController
   end
 
   def create
-    @note = Note.new(note_params)
+    @note = current_user.notes.create(note_params)
 
     respond_to do |format|
       if @note.save
@@ -45,6 +45,7 @@ class NotesController < ApplicationController
 
   def destroy
     @note.destroy
+
     respond_to do |format|
       format.html { redirect_to notes_url, notice: 'Note was successfully destroyed.' }
       format.json { head :no_content }

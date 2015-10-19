@@ -7,6 +7,11 @@
     <%= sanitize(@note.body) %>
   </p>
 
-  <%= link_to 'Edit', edit_note_path(@note) %> |
+  <p>
+    <strong>Content:</strong>
+    <%= image_tag(@note.content) %>
+  </p>
+
+  <%= link_to 'Edit', edit_note_path(@note), data: { 'no-turbolink'=>true} %> |
   <%= link_to 'Back', notes_path %>
-</div>
+</div><br>

@@ -1,4 +1,6 @@
 <div id="notes"><br>
+  <%= link_to 'New Note', new_note_path, data: { 'no-turbolink'=>true}, 
+                                          class: "btn btn-success" %>
   <h1>Listing my Notes</h1>
 
     <% @notes.each do |note| %>
@@ -7,7 +9,8 @@
         <%= sanitize(note.body[0,200]) %><br>
         <td><%= link_to 'Edit', edit_note_path(note), class: "btn btn-success", 
                                         data: { 'no-turbolink'=>true} %></td>
-        <td><%= link_to 'Destroy', note, method: :delete, class: "btn btn-danger" %></td><br><br>
+        <td><%= link_to 'Destroy', note, method: :delete, 
+                                        class: "btn btn-danger" %></td><br><br>
       </div>
     <% end %>
 </div>
