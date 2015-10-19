@@ -54,10 +54,10 @@ class NotesController < ApplicationController
 
   private
     def set_note
-      @note = Note.find(params[:id])
+      @note = current_user.notes.find(params[:id])
     end
 
     def note_params
-      params.require(:note).permit(:title, :body, :content)
+      params.require(:note).permit(:title, :body, :content, :content_cache)
     end
 end
