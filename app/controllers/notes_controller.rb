@@ -18,7 +18,7 @@ class NotesController < ApplicationController
   end
 
   def create
-    @note = current_user.notes.create(note_params)
+    @note = current_user.notes.build(note_params)
 
     respond_to do |format|
       if @note.save
@@ -58,6 +58,6 @@ class NotesController < ApplicationController
     end
 
     def note_params
-      params.require(:note).permit(:title, :body, :content, :content_cache)
+      params.require(:note).permit(:title, :body, {content: []}, :content_cache)
     end
 end

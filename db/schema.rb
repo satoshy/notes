@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20151018212003) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
-    t.string   "content"
+    t.json     "content"
   end
 
   add_index "notes", ["user_id"], name: "index_notes_on_user_id", using: :btree

@@ -2,14 +2,19 @@
   <h2>
     <%= @note.title %>
   </h2>
-
   <p>
     <%= sanitize(@note.body) %>
   </p>
-
   <p>
     <strong>Content:</strong>
-    <%= image_tag(@note.content) %>
+    <% @note.content.map do |media| %>
+      <table>
+        <tr>
+          <td><%= image_tag(preview_or_default_image(media)) %></td>
+          <td><%= link_to "#{media.file.filename}", files_download_path(path: media.current_path.to_s) %></td>
+        </tr>
+      </table>
+    <% end %>
   </p>
 
   <%= link_to 'Edit', edit_note_path(@note), data: { 'no-turbolink'=>true} %> |

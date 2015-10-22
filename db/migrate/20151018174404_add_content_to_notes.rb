@@ -1,5 +1,5 @@
 class AddContentToNotes < ActiveRecord::Migration
   def change
-    add_column :notes, :content, :string
+    add_column :notes, :content, :json
   end
 end

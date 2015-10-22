@@ -22,7 +22,7 @@ gem 'rolify'
 
 gem 'simple_form'
 gem 'will_paginate', '~> 3.0.6'
-gem 'carrierwave'
+gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
 gem 'mini_magick'
 gem "jquery-fileupload-rails"
 gem 'ckeditor', github: 'galetahub/ckeditor'
